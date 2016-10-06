@@ -32,3 +32,17 @@ This repo is part of the partner program of Vanmarcke Software for their softwar
 Which is a online web application for invoice management - ERP
 
 Currently in transitioning from an old design to a new responsive design. Which well be the default soon. New customers always receive the new responsive design.
+
+Documentation of the api can be found on http://api.omnisoftonline.be/
+Example of api calls can be called on http://api.omnisoftonline.be/docs/index.html (wait a while to load, the documentation is live generated)
+
+# Short Info on Api
+We use odata webapi, which uses Web Api but can handle odata-query like strings. Eg. https://www.asp.net/web-api/overview/odata-support-in-aspnet-web-api/supporting-odata-query-options
+ - Eg. paging would be //{url}/{version}/{Entity}?$skip=200&$take=100
+ - Eg. filter on name would be //{url}/{version}/{Entity}?$$filter=Name eq 'Nico Sap'
+
+We support xml and json through a url parameter ( &format=xml or &format=json ) , the default is json. Please notice some differences handling ComplexTypes like Address .
+ 
+More info on http://api.omnisoftonline.be/ which handles all the concepts about the api.
+
+Currently we have a .Net Api Client for your disposal.
