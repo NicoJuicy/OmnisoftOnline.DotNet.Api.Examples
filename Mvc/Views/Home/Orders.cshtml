@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Omnisoft.Domain.DTO.Order>
+@{
+    ViewBag.Title = "Orders";
+}
+
+<h2>Orders</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>
+                Number
+            </th>
+            <th>
+                Client Name
+            </th>
+            <th>
+                Order Type
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var order in Model)
+        {
+            <tr>
+                <td>@order.Number</td>
+                <td>
+                    @order.ClientName
+                </td>
+                <td>
+                    @order.OrderStateCode
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>

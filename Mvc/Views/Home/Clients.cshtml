@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Omnisoft.Domain.DTO.Client>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2>Clients</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                isActive
+            </th>
+            <th>
+                Country
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var client in Model)
+        {
+            <tr>
+                <td>@client.Naam</td>
+                <td>
+                    @client.Active
+                </td>
+                <td>
+                    @client.Adres_Land
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>

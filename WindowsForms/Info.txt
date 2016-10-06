@@ -1,0 +1,20 @@
+﻿Quick Start
+
+Add a reference to Omnisoft.Api.Connector.dll (You can find a pre-compiled version in the build folder of this repository or install Stripe.net via NuGet)
+
+Next you will need to provide Stripe.net with your api key. There are 3 ways to do this: Choose one.
+
+a) Add an AppSetting with your api key to your config (this is the easiest way)
+
+<appSettings>
+...
+    <add key="OmnisoftApiKey" value="[your api key here]" />
+...
+</appSettings>
+b) In your application initialization, call (this is a programmatic way, but you only have to do it once during startup)
+
+OmnisoftConfiguration.SetApiKey("[your api key here]");
+c) In any of the service constructors documented below, you can optionally pass the api key (not recommended for single app/single key use). i.e...
+
+var planService = new StripePlanService("[your api key here]");
+Use the library :)

@@ -1,0 +1,58 @@
+﻿@model Omnisoft.Domain.ComplexTypes.Adres
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            @Html.LabelFor(model => model.AdresLijn1, new { @class = "col-md-2 control-label" })
+            <div class="col-md-9">
+                @Html.TextBoxFor(dl => dl.AdresLijn1, new { @class = "form-control" })
+                @Html.ValidationMessageFor(dl => dl.AdresLijn1)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AdresLijn2, new { @class = "col-md-2 control-label" })
+            <div class="col-md-9">
+                @Html.TextBoxFor(dl => dl.AdresLijn2, new { @class = "form-control ", autocomplete = "off" })
+                @Html.ValidationMessageFor(dl => dl.AdresLijn2)
+            </div>
+        </div>
+
+        <div class="row">
+            @Html.LabelFor(model => model.PostCode, new { @class = "col-md-2 control-label" })
+            <div class=" col-md-2">
+                <div class="form-group">
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(dl => dl.PostCode, new { @class = "form-control ajax-zipcode", autocomplete = "off" })
+                        @Html.ValidationMessageFor(dl => dl.PostCode)
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Gemeente, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(dl => dl.Gemeente, new { @class = "form-control ajax-city", autocomplete = "off" })
+                        @Html.ValidationMessageFor(dl => dl.Gemeente)
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Land, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(dl => dl.Land, new { @class = "form-control ajax-country", autocomplete = "off" })
+                        @Html.ValidationMessageFor(dl => dl.Land)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+

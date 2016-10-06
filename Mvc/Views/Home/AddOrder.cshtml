@@ -1,0 +1,11 @@
+﻿@model Omnisoft.Domain.DTO.Order
+@{
+    ViewBag.Title = "AddOrder";
+}
+
+<form method="post" enctype="multipart/form-data" action="@Url.Action("AddOrder","Home")" class="form-horizontal">
+    <p>
+        Pressing submit will generate a random order
+    </p>
+    <input type="submit" value="submit" />
+    </form>
