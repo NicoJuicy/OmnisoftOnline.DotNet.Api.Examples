@@ -1,5 +1,6 @@
 Please contact info@vanmarcke-software.be for additional info.
-I changed employer.
+
+It's not maintained anymore by me.
 
 # OmnisoftOnline.DotNet.Api.Examples
 An example of API usage for Omnisoft Online
